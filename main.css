@@ -8,7 +8,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: linear-gradient(to right, whitesmoke, purple);
 }
 
@@ -17,16 +16,26 @@ body{
     justify-content: center;
     align-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 150px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
 .calculator > button{
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: 1px solid purple;
     outline: none;
     background-color: whitesmoke;
+}
+
+.calculator > button.red{
+    background-color: rgba(255, 68, 0, 0.712);
+    color: white;
+}
+
+.calculator > button.purple{
+    background-color: rgba(86, 12, 116, 0.658);
+    color: white;
 }
 
 .calculator > button:hover{
@@ -47,6 +56,7 @@ body{
     color: purple;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .screen{
     grid-column: 1 / -1;
     background-color: hsla(0, 0%, 0%, 0.75);
@@ -67,4 +77,21 @@ body{
 .screen .currSolution{
     color: white;
     font-size: 2.5rem;
+}
+
+
+@media only screen and (max-width: 768px){
+    .calculator{
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: minmax(60px, auto) repeat(5, 70px);
+    }
+
+    .screen{
+        background-color: transparent;
+    }
+
+    .screen .prevSolution{
+        color: black;
+        font-size: 1.5rem;
+    }
 }
