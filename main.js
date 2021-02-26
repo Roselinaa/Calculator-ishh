@@ -12,9 +12,9 @@
         }
 
         //DEL button function
-        // delete() {
-        //     this.currentSolution = this.currentSolution.toString().slice(0, -1);
-        // }
+        delete() {
+            this.currentSolution = this.currentSolution.toString().slice(0, -1);
+        }
 
         addNumber(number) {
             if (number === '.' && this.currentSolution.includes('.')) return
